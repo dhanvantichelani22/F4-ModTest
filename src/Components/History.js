@@ -4,7 +4,7 @@ const History = () => {
   return (
     <div>
         <Nav/>
-    <h1>History Page</h1>
+    <h1>Search History</h1>
     </div>
   )
 }
