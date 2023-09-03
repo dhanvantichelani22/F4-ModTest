@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
+import Nav from './Components/Nav';
+import Heading from './Components/Heading';
+import Home from './Components/Home';
+import History from './Components/History';
+import Context from './Components/Context';
+// Route self-closed tag
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
+  // const[word,setWord] = useState("");
+  // const[result,setResult] = useState([]);
+
+  //  const searchWord = async()=>{
+  //     const response = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/"+word);
+  //     const data = await response.json();
+  //     setResult(data[0]);
+  //   };
+  //   console.log(result);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='mainContainer'>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/history' element={<History/>}/>
+      </Routes>
+    
+      </div>
   );
 }
 
